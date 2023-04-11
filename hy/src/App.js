@@ -1,12 +1,12 @@
 import './App.css';
 import Bio from './Bio';
-import Button from './Button';
+import Table from './Table';
 function App() {
   return (
     <div className="App">
       <h1>Rahul Neupane</h1>
       <Bio/>
-      <Button/>
+      <Table/>
     </div>
   );
 }
