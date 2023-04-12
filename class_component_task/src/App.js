@@ -1,11 +1,11 @@
+import { Component } from 'react';
 import Button from './Button';
 
-function App() {
-  return (
-    <div className="App">
+class App extends Component{
+  render(){
+    return(
       <Button/>
-    </div>
-  );
+    )
+  }
 }
-
 export default App;
