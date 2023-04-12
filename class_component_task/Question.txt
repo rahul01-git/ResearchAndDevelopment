@@ -1,0 +1,1 @@
+make 5 btn each with colour name and the bg colour should be changed acc to that btn name
