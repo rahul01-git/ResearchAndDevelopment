@@ -3,6 +3,7 @@ import { Component } from 'react'
 class App extends Component {
     constructor() {
         super();
+        this.state ={count:0}
         console.log("constructor")
     }
 
@@ -17,7 +18,7 @@ class App extends Component {
     render() {
         console.log("render")
         return (
-            <h1>hy</h1>
+            <button onClick={() => this.setState({count:this.state.count+1})}>{this.props.title} - {this.state.count}</button>
         )
     }
 }
