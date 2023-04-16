@@ -5,23 +5,22 @@ import List from "./List";
 class Input extends Component {
     constructor() {
         super()
-        this.state = { input: "", btnClicked: false }
-        this.todos = []
+        this.state = { todos : [], btnClicked: false }
+        this.input= '';
     }
     handleChange = event => {
-        this.setState({ input: event.target.value });
+        this.input = event.target.value;
     }
 
     handleClick = () =>{
-        this.todos.push(this.state.input)
-        this.setState({ btnClicked: true })
+        this.setState({ btnClicked: true ,todos: [...this.state.todos,this.input]})
     }
     render() {
         return (
             <div className="App">
                 <input type="text" id="txt" autoFocus onChange={this.handleChange} placeholder="enter todo"/>
                 <button onClick={this.handleClick}>Save</button>
-                <List todos={this.todos} btnClicked={this.state.btnClicked}/>
+                <List todos={this.state.todos} btnClicked={this.state.btnClicked}/>
             </div>
         )
     }
