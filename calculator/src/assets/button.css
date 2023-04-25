@@ -1,0 +1,21 @@
+.btns{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+}
+
+.btn{
+    font-size: 20px;
+    font-weight: 600;
+    height: 80px;
+    cursor: pointer;
+    border: 1px solid lightgray;
+    outline: none;
+}
+.btn.op{
+    background: orange;
+    color: #fff;
+}
+.lrf{
+    grid-column: span 2;
+}
