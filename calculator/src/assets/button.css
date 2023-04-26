@@ -1,4 +1,4 @@
-.btns{
+.buttons{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(4,1fr);
@@ -11,8 +11,17 @@
     cursor: pointer;
     border: 1px solid lightgray;
     outline: none;
+    background: white;
+    color: black;
 }
-.btn.op{
+.btn:hover{
+    background: lightgray;
+}
+.btn:active{
+    outline: none;
+    transform: scale(0.98);
+}
+.btn.operator,.btn.equal{
     background: orange;
     color: #fff;
 }

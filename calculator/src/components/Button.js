@@ -1,29 +1,93 @@
 import '../assets/button.css'
-export default function Button({screen,setScreen}) {
-    const handleClick = (e) =>{
-        setScreen(e.target.name)
+import React, { useState } from 'react'
+
+export default function Button({ screen, setScreen }) {
+    const [preValue, setPreValue] = useState(0)
+    const [haveDot, setHaveDot] = useState(false)
+    const [operatorVal, setOperatorVal] = useState('')
+
+
+    const handleNumber = (e) => {
+        if (e.target.innerText === '.' && haveDot) {
+            return;
+        } else if (e.target.innerText === '.') {
+            setHaveDot(true)
+        }
+        setScreen(screen + e.target.innerText);
+    };
+
+    const handleOperator = (e) => {
+        if(screen == '') return
+        setPreValue(parseFloat(screen));
+        setScreen('');
+        setOperatorVal(e.target.innerText);
     }
-  return (
-    <div className='btns'>
-        <button onClick={handleClick} className="btn">AC</button>
-        <button onClick={handleClick} className="btn">+/-</button>
-        <button onClick={handleClick} className="btn">%</button>
-        <button name='/' onClick={handleClick} className="btn op">&divide;</button>
-        <button name='7' onClick={handleClick} className="btn">7</button>
-        <button name='8' onClick={handleClick} className="btn">8</button>
-        <button name='9' onClick={handleClick} className="btn">9</button>
-        <button name='x' onClick={handleClick} className="btn op">x</button>
-        <button name='4' onClick={handleClick} className="btn">4</button>
-        <button name='5' onClick={handleClick} className="btn">5</button>
-        <button name='6' onClick={handleClick} className="btn">6</button>
-        <button name='-' onClick={handleClick} className="btn op">-</button>
-        <button name='1' onClick={handleClick} className="btn">1</button>
-        <button name='2' onClick={handleClick} className="btn">2</button>
-        <button name='3' onClick={handleClick} className="btn">3</button>
-        <button name='+' onClick={handleClick} className="btn op">+</button>
-        <button name='0' onClick={handleClick} className="btn lrf">0</button>
-        <button name='.' onClick={handleClick} className="btn">.</button>
-        <button name='=' onClick={handleClick} className="btn op">=</button>
-    </div>
-  )
+    const handleEqual = () => {
+        calculateResult()
+        setOperatorVal('')
+    }
+
+    const handleToggle = () => {
+        (screen == '') || setScreen(parseFloat(screen) * -1)
+    }
+
+    const calculateResult = () => {
+        (screen && preValue)
+        switch (operatorVal) {
+            case '+':
+                setPreValue(preValue + parseFloat(screen))
+                setScreen(preValue + parseFloat(screen))
+                break
+            case '-':
+                setPreValue(preValue - parseFloat(screen))
+                setScreen(preValue - parseFloat(screen))
+                break
+            case 'x':
+                setPreValue(preValue * parseFloat(screen))
+                setScreen(preValue * parseFloat(screen))
+                break
+            case '/':
+                setPreValue(preValue / parseFloat(screen))
+                setScreen(preValue / parseFloat(screen))
+                break
+            default:
+                console.log('default')
+                break
+        }
+    }
+
+    const handlePercentage = () => {
+        (screen == '') ||  setScreen((parseFloat(screen)/100))
+    }
+
+    const handleClear = () => {
+        setScreen('')
+        setPreValue(0)
+        setOperatorVal('')
+        setHaveDot(false)
+    }
+    return (
+        <div className="buttons">
+
+            <button className="btn" onClick={handleClear}>AC</button>
+            <button className="btn" onClick={handleToggle}>+/-</button>
+            <button className="btn" onClick={handlePercentage}>%</button>
+            <button className="btn operator" onClick={handleOperator}>/</button>
+            <button className="btn number" onClick={handleNumber}>7</button>
+            <button className="btn number" onClick={handleNumber}>8</button>
+            <button className="btn number" onClick={handleNumber}>9</button>
+            <button className="btn operator" onClick={handleOperator}>x</button>
+            <button className="btn number" onClick={handleNumber}>4</button>
+            <button className="btn number" onClick={handleNumber}>5</button>
+            <button className="btn number" onClick={handleNumber}>6</button>
+            <button className="btn operator" onClick={handleOperator}>-</button>
+            <button className="btn number" onClick={handleNumber}>1</button>
+            <button className="btn number" onClick={handleNumber}>2</button>
+            <button className="btn number" onClick={handleNumber}>3</button>
+            <button className="btn operator" onClick={handleOperator}>+</button>
+            <button className="btn number lrf" onClick={handleNumber}>0</button>
+            <button className="btn number dot" onClick={handleNumber}>.</button>
+            <button className="btn equal" onClick={handleEqual}>=</button>
+        </div>
+    )
 }
