@@ -37,7 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react-refresh", "virtual:605604ebab73c9ce110e1626fe197b6e1565a1dbde10b72b07bd15acba456be663f844d24785f14924a90e44b97f664118511bb8953045444771357e7b170cf9#npm:0.3.5"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:605604ebab73c9ce110e1626fe197b6e1565a1dbde10b72b07bd15acba456be663f844d24785f14924a90e44b97f664118511bb8953045444771357e7b170cf9#npm:18.2.0"],\
-            ["vite", "virtual:605604ebab73c9ce110e1626fe197b6e1565a1dbde10b72b07bd15acba456be663f844d24785f14924a90e44b97f664118511bb8953045444771357e7b170cf9#npm:4.3.3"]\
+            ["vite", "virtual:605604ebab73c9ce110e1626fe197b6e1565a1dbde10b72b07bd15acba456be663f844d24785f14924a90e44b97f664118511bb8953045444771357e7b170cf9#npm:4.3.9"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -844,7 +844,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/plugin-transform-react-jsx-source", "virtual:07ed0f312387c51c33b06492ebfe4ce3d57d1dfdc741e6a28ecfa40084bfc591fcd25da6c29feb330865809378d829c6f47c5055614fe470e416d6af964ccaad#npm:7.19.6"],\
             ["@types/vite", null],\
             ["react-refresh", "npm:0.14.0"],\
-            ["vite", "virtual:605604ebab73c9ce110e1626fe197b6e1565a1dbde10b72b07bd15acba456be663f844d24785f14924a90e44b97f664118511bb8953045444771357e7b170cf9#npm:4.3.3"]\
+            ["vite", "virtual:605604ebab73c9ce110e1626fe197b6e1565a1dbde10b72b07bd15acba456be663f844d24785f14924a90e44b97f664118511bb8953045444771357e7b170cf9#npm:4.3.9"]\
           ],\
           "packagePeers": [\
             "@types/vite",\
@@ -2245,7 +2245,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react-refresh", "virtual:605604ebab73c9ce110e1626fe197b6e1565a1dbde10b72b07bd15acba456be663f844d24785f14924a90e44b97f664118511bb8953045444771357e7b170cf9#npm:0.3.5"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:605604ebab73c9ce110e1626fe197b6e1565a1dbde10b72b07bd15acba456be663f844d24785f14924a90e44b97f664118511bb8953045444771357e7b170cf9#npm:18.2.0"],\
-            ["vite", "virtual:605604ebab73c9ce110e1626fe197b6e1565a1dbde10b72b07bd15acba456be663f844d24785f14924a90e44b97f664118511bb8953045444771357e7b170cf9#npm:4.3.3"]\
+            ["vite", "virtual:605604ebab73c9ce110e1626fe197b6e1565a1dbde10b72b07bd15acba456be663f844d24785f14924a90e44b97f664118511bb8953045444771357e7b170cf9#npm:4.3.9"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -3684,17 +3684,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["vite", [\
-        ["npm:4.3.3", {\
-          "packageLocation": "./.yarn/cache/vite-npm-4.3.3-1c7de1c7d7-99970cb1fe.zip/node_modules/vite/",\
+        ["npm:4.3.9", {\
+          "packageLocation": "./.yarn/cache/vite-npm-4.3.9-24f3552941-8c45a51627.zip/node_modules/vite/",\
           "packageDependencies": [\
-            ["vite", "npm:4.3.3"]\
+            ["vite", "npm:4.3.9"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:605604ebab73c9ce110e1626fe197b6e1565a1dbde10b72b07bd15acba456be663f844d24785f14924a90e44b97f664118511bb8953045444771357e7b170cf9#npm:4.3.3", {\
-          "packageLocation": "./.yarn/__virtual__/vite-virtual-505166aaf0/0/cache/vite-npm-4.3.3-1c7de1c7d7-99970cb1fe.zip/node_modules/vite/",\
+        ["virtual:605604ebab73c9ce110e1626fe197b6e1565a1dbde10b72b07bd15acba456be663f844d24785f14924a90e44b97f664118511bb8953045444771357e7b170cf9#npm:4.3.9", {\
+          "packageLocation": "./.yarn/__virtual__/vite-virtual-9ec593eaad/0/cache/vite-npm-4.3.9-24f3552941-8c45a51627.zip/node_modules/vite/",\
           "packageDependencies": [\
-            ["vite", "virtual:605604ebab73c9ce110e1626fe197b6e1565a1dbde10b72b07bd15acba456be663f844d24785f14924a90e44b97f664118511bb8953045444771357e7b170cf9#npm:4.3.3"],\
+            ["vite", "virtual:605604ebab73c9ce110e1626fe197b6e1565a1dbde10b72b07bd15acba456be663f844d24785f14924a90e44b97f664118511bb8953045444771357e7b170cf9#npm:4.3.9"],\
             ["@types/less", null],\
             ["@types/node", null],\
             ["@types/sass", null],\
